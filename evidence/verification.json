@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-11-06T17:59:17.636889+00:00",
+  "kind": "local deterministic verification",
+  "node": "v26.13.0",
+  "tests": {
+    "passed": 27,
+    "failed": 0,
+    "bounded_combinations": 144
+  },
+  "mcp_regression_cases": {
+    "passed": 10,
+    "total": 10,
+    "tool_calls": 30,
+    "model_calls": 0
+  },
+  "demo": "four scripted stages; every stage executionAllowed=false",
+  "source_sha256": {
+    "src/workflow.ts": "9a9638efc6082b44c664323891e5dbd2546bab990cf4cfd2d868b19eaafb87f3",
+    "src/server.ts": "34825f8d40a3382e1156147d02b1af4d56f1c7b13d677be7408eefabb5fa9122",
+    "src/fixtures.ts": "66af849116850590fb3ed2f56dc6a0c051f6f3be0892058a4eb1a9bc4a3aa1d0",
+    "src/demo.ts": "fd20b6a0d716fb300d38111154793b56f08d26e91072aff78e699483201c649c",
+    "src/evaluate.ts": "13356f083d5c22f5076a951dec5dc04dfbed79d7691fe59dd98f1f5df32d80dc",
+    "scripts/hook.mjs": "dee8dc403f829527e4b26ab2c34f5e637f55d0cc6ef1ac1e3d577d4a9d4feea8",
+    "test/workflow.test.ts": "4420c9a1050560d622e7f43927041873a6a87bbaaabe0b9f2c4d0796ea0b03d4",
+    "test/mcp.test.ts": "814101f229f2100657c5b08775f98dd12aadc7d1b3160804aaba0d19dcae87d7",
+    "test/hook.test.ts": "99572830013f6d5975487cb71c896f38328432b1ccac2f1fefa874c60d5bc81c",
+    "package-lock.json": "6d79ebed6b4c05f7514cab12149c84479d7e521831aeb570c9e22dc671686343"
+  },
+  "limits": "No model run, authenticated independent review, real inventory mutation, enterprise deployment or security certification claimed."
+}

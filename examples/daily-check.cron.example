@@ -1,0 +1,3 @@
+# EXAMPLE ONLY. Not installed or enabled. Replace the path and log destination.
+# A finite local check, not a model loop, inbox watcher or deployment job.
+# 0 9 * * * cd /path/to/agent-workflow-lab && timeout 120 npm run verify >> /path/to/workflow-check.log 2>&1

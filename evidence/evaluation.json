@@ -1,0 +1,69 @@
+{
+  "kind": "deterministic-mcp-regression",
+  "modelInvocations": 0,
+  "toolCalls": 30,
+  "passed": 10,
+  "total": 10,
+  "cases": [
+    {
+      "id": "aggregate",
+      "expected": "insufficient_stock:depot:cable",
+      "actual": "insufficient_stock:depot:cable",
+      "pass": true
+    },
+    {
+      "id": "balanced",
+      "expected": "valid",
+      "actual": "valid",
+      "pass": true
+    },
+    {
+      "id": "replay",
+      "expected": "replays:1",
+      "actual": "replays:1",
+      "pass": true
+    },
+    {
+      "id": "conflict",
+      "expected": "conflicting_replay:req-north",
+      "actual": "conflicting_replay:req-north",
+      "pass": true
+    },
+    {
+      "id": "stale",
+      "expected": "stale_inventory",
+      "actual": "stale_inventory",
+      "pass": true
+    },
+    {
+      "id": "zero",
+      "expected": "schema_error",
+      "actual": "schema_error",
+      "pass": true
+    },
+    {
+      "id": "untrusted-note",
+      "expected": "valid",
+      "actual": "valid",
+      "pass": true
+    },
+    {
+      "id": "adapter",
+      "expected": "valid",
+      "actual": "valid",
+      "pass": true
+    },
+    {
+      "id": "relay",
+      "expected": "insufficient_stock:north:cable",
+      "actual": "insufficient_stock:north:cable",
+      "pass": true
+    },
+    {
+      "id": "same-store",
+      "expected": "same_store:req-north",
+      "actual": "same_store:req-north",
+      "pass": true
+    }
+  ]
+}

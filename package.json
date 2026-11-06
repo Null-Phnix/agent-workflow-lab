@@ -1,0 +1,19 @@
+{
+  "name": "agent-workflow-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A reproducible, fictional agent workflow with read-only MCP tools and evidence-bound review.",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "demo": "npm run build && node dist/src/demo.js",
+    "verify": "npm test && node scripts/check-public.mjs",
+    "eval": "npm run build && node dist/src/evaluate.js",
+    "mcp": "node dist/src/server.js"
+  },
+  "dependencies": { "@modelcontextprotocol/server": "2.4.0", "zod": "4.6.7" },
+  "devDependencies": { "@modelcontextprotocol/client": "2.4.0", "@types/node": "26.6.6", "typescript": "7.0.2" }
+}

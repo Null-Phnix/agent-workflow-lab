@@ -1,0 +1,172 @@
+{
+  "kind": "deterministic-control-demo",
+  "modelInvocations": 0,
+  "reviewer": "scripted fixture, not an independent model or human review",
+  "stages": [
+    {
+      "name": "Over-allocation blocked",
+      "result": {
+        "evaluation": {
+          "subjectHash": "0599a6b5ef349c145ad24d3410e7ea48f438abb8aa4a968ad7db0db47ec66002",
+          "ruleset": "inventory-transfer-v1",
+          "valid": false,
+          "violations": [
+            "insufficient_stock:depot:cable"
+          ],
+          "skippedReplays": 0,
+          "projectedStock": []
+        },
+        "executionAllowed": false,
+        "state": "blocked_evaluation",
+        "reasons": [
+          "insufficient_stock:depot:cable"
+        ]
+      }
+    },
+    {
+      "name": "Corrected proposal needs review",
+      "result": {
+        "evaluation": {
+          "subjectHash": "cde8ed6591fd49649a2dcce899fa3790c1deb610c6ef8dcd66bca69a906cef65",
+          "ruleset": "inventory-transfer-v1",
+          "valid": true,
+          "violations": [],
+          "skippedReplays": 0,
+          "projectedStock": [
+            {
+              "store": "depot",
+              "sku": "cable",
+              "quantity": 0
+            },
+            {
+              "store": "north",
+              "sku": "cable",
+              "quantity": 5
+            },
+            {
+              "store": "south",
+              "sku": "cable",
+              "quantity": 6
+            },
+            {
+              "store": "depot",
+              "sku": "adapter",
+              "quantity": 4
+            },
+            {
+              "store": "north",
+              "sku": "adapter",
+              "quantity": 0
+            },
+            {
+              "store": "south",
+              "sku": "adapter",
+              "quantity": 0
+            }
+          ]
+        },
+        "executionAllowed": false,
+        "state": "needs_review",
+        "reasons": [
+          "No review provided"
+        ]
+      }
+    },
+    {
+      "name": "Old review rejected",
+      "result": {
+        "evaluation": {
+          "subjectHash": "cde8ed6591fd49649a2dcce899fa3790c1deb610c6ef8dcd66bca69a906cef65",
+          "ruleset": "inventory-transfer-v1",
+          "valid": true,
+          "violations": [],
+          "skippedReplays": 0,
+          "projectedStock": [
+            {
+              "store": "depot",
+              "sku": "cable",
+              "quantity": 0
+            },
+            {
+              "store": "north",
+              "sku": "cable",
+              "quantity": 5
+            },
+            {
+              "store": "south",
+              "sku": "cable",
+              "quantity": 6
+            },
+            {
+              "store": "depot",
+              "sku": "adapter",
+              "quantity": 4
+            },
+            {
+              "store": "north",
+              "sku": "adapter",
+              "quantity": 0
+            },
+            {
+              "store": "south",
+              "sku": "adapter",
+              "quantity": 0
+            }
+          ]
+        },
+        "executionAllowed": false,
+        "state": "blocked_review",
+        "reasons": [
+          "stale_review"
+        ]
+      }
+    },
+    {
+      "name": "Matching fixture review stops at owner",
+      "result": {
+        "evaluation": {
+          "subjectHash": "cde8ed6591fd49649a2dcce899fa3790c1deb610c6ef8dcd66bca69a906cef65",
+          "ruleset": "inventory-transfer-v1",
+          "valid": true,
+          "violations": [],
+          "skippedReplays": 0,
+          "projectedStock": [
+            {
+              "store": "depot",
+              "sku": "cable",
+              "quantity": 0
+            },
+            {
+              "store": "north",
+              "sku": "cable",
+              "quantity": 5
+            },
+            {
+              "store": "south",
+              "sku": "cable",
+              "quantity": 6
+            },
+            {
+              "store": "depot",
+              "sku": "adapter",
+              "quantity": 4
+            },
+            {
+              "store": "north",
+              "sku": "adapter",
+              "quantity": 0
+            },
+            {
+              "store": "south",
+              "sku": "adapter",
+              "quantity": 0
+            }
+          ]
+        },
+        "executionAllowed": false,
+        "state": "awaiting_owner",
+        "reasons": []
+      }
+    }
+  ]
+}

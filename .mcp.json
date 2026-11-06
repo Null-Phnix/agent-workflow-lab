@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "workflow_lab": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${WORKFLOW_LAB_ROOT}/dist/src/server.js"]
+    }
+  }
+}
