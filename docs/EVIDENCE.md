@@ -25,6 +25,8 @@ inventory scenario is fictional and contains no employer data.
 | `npm run verify` | Compile, deterministic invariants, hook decisions and actual stdio MCP contract tests | General agent reliability |
 | `npm run eval` | Ten expected outcomes through thirty real MCP calls | Model accuracy or safety |
 | `npm run demo` | Four scripted failure/correction/review stages | Independent model/human review |
+| `npm run demo:cohere` | Replays a recorded Command R7B proposal against four inventory and review combinations | A fresh model generation |
+| `npm run demo:cohere -- --live` | One local Command R7B inference, evaluated through the read-only workflow | Hosted Cohere API performance or production safety |
 | `evals/questions.xml` | Ten independently answerable tasks for a later model trial | A completed model evaluation |
 | GitHub Actions | Checks on the commit shown by that run | Installation in a real organization |
 

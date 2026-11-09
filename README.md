@@ -35,6 +35,22 @@ verdict in this command are **scripted fixtures**, not model output. The tests
 also launch a real MCP server process, discover its tools and call them over
 stdio. Those are different kinds of evidence.
 
+## A Cohere model proposes a transfer
+
+Command R7B receives a fictional inventory request and returns a structured
+proposal. The host sends it to the read-only MCP evaluator. After a scripted
+reviewer approves the proposal, a simulated sale changes
+depot stock from eight cables to seven. The requested four still fit. Can the
+proposal or the approval be reused?
+
+```sh
+npm run demo:cohere
+```
+
+This replays the [recorded model call](evidence/cohere-command-r7b.json) and
+rechecks four cases through the MCP tools without calling a model. For a fresh
+local inference and the expected results, see [the Cohere experiment](docs/COHERE.md).
+
 ## What to inspect
 
 | Question | Evidence |
@@ -93,8 +109,9 @@ does not stand in for years of professional software employment.
 
 ## Boundaries
 
-There is no live inventory connector, arbitrary file reader, network fetcher,
-credential handling, send tool, approval issuer or deployment tool. The hash
+The MCP tools use fictional inventory and have no filesystem or network access
+through their inputs. The optional live model demo connects only to a local
+Ollama server. The hash
 detects which input a review describes; it does not authenticate the reviewer.
 Nothing here claims SOC 2/ISO certification, enterprise scale, RAG quality or
 model-level prompt-injection resistance.
