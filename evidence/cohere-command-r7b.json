@@ -1,0 +1,104 @@
+{
+  "mode": "live",
+  "modelCallsThisRun": 1,
+  "task": "Propose moving four cables from depot to north.",
+  "source": {
+    "model": "command-r7b:7b",
+    "modelDigest": "ff4e9696ef9f19b62e3f7d7261c95dcc9bb15a7c0398493366d851119fe2e1ef",
+    "runtime": "Ollama 0.31.1",
+    "observedAt": "2026-11-09T19:14:52.877Z",
+    "responseFormat": "json-schema",
+    "proposal": {
+      "from": "depot",
+      "to": "north",
+      "sku": "cable",
+      "quantity": 4
+    }
+  },
+  "taskMatched": true,
+  "reviewSource": "scripted fixture",
+  "cases": [
+    {
+      "id": "unchanged",
+      "expected": "awaiting_owner",
+      "observed": "awaiting_owner",
+      "expectedReasons": [],
+      "reasons": [],
+      "depotCables": 8,
+      "inventoryBefore": "c7e0ca4c1649f7665918ff05a030874d8c46324bb031c31e89143126a774a443",
+      "inventoryAfter": "c7e0ca4c1649f7665918ff05a030874d8c46324bb031c31e89143126a774a443",
+      "planInventory": "c7e0ca4c1649f7665918ff05a030874d8c46324bb031c31e89143126a774a443",
+      "reviewSubject": "2b43e229a18e662753e8d0c34323fed4c2dd8154bae6e3a3c307122858e36608",
+      "currentSubject": "2b43e229a18e662753e8d0c34323fed4c2dd8154bae6e3a3c307122858e36608",
+      "toolAcceptedPlan": true,
+      "toolAgrees": true,
+      "executionAllowed": false,
+      "pass": true
+    },
+    {
+      "id": "stock-changed",
+      "expected": "blocked_evaluation",
+      "observed": "blocked_evaluation",
+      "expectedReasons": [
+        "stale_inventory"
+      ],
+      "reasons": [
+        "stale_inventory"
+      ],
+      "depotCables": 7,
+      "inventoryBefore": "27bf5609b121c24173f5a328e347fcdafe1db6e488057ffc1b45ab41cd5a0f60",
+      "inventoryAfter": "27bf5609b121c24173f5a328e347fcdafe1db6e488057ffc1b45ab41cd5a0f60",
+      "planInventory": "c7e0ca4c1649f7665918ff05a030874d8c46324bb031c31e89143126a774a443",
+      "reviewSubject": "2b43e229a18e662753e8d0c34323fed4c2dd8154bae6e3a3c307122858e36608",
+      "currentSubject": "8c9de6b3644915a679cd27cf918a7d249fff48b281130e340bb035a352312fce",
+      "toolAcceptedPlan": false,
+      "toolAgrees": true,
+      "executionAllowed": false,
+      "pass": true
+    },
+    {
+      "id": "updated-plan-old-review",
+      "expected": "blocked_review",
+      "observed": "blocked_review",
+      "expectedReasons": [
+        "stale_review"
+      ],
+      "reasons": [
+        "stale_review"
+      ],
+      "depotCables": 7,
+      "inventoryBefore": "27bf5609b121c24173f5a328e347fcdafe1db6e488057ffc1b45ab41cd5a0f60",
+      "inventoryAfter": "27bf5609b121c24173f5a328e347fcdafe1db6e488057ffc1b45ab41cd5a0f60",
+      "planInventory": "27bf5609b121c24173f5a328e347fcdafe1db6e488057ffc1b45ab41cd5a0f60",
+      "reviewSubject": "2b43e229a18e662753e8d0c34323fed4c2dd8154bae6e3a3c307122858e36608",
+      "currentSubject": "4ea09da68b54f91828e793a3b77f71e0ae25e17ed3374316c9ea777ac78b341a",
+      "toolAcceptedPlan": true,
+      "toolAgrees": true,
+      "executionAllowed": false,
+      "pass": true
+    },
+    {
+      "id": "fresh-review",
+      "expected": "awaiting_owner",
+      "observed": "awaiting_owner",
+      "expectedReasons": [],
+      "reasons": [],
+      "depotCables": 7,
+      "inventoryBefore": "27bf5609b121c24173f5a328e347fcdafe1db6e488057ffc1b45ab41cd5a0f60",
+      "inventoryAfter": "27bf5609b121c24173f5a328e347fcdafe1db6e488057ffc1b45ab41cd5a0f60",
+      "planInventory": "27bf5609b121c24173f5a328e347fcdafe1db6e488057ffc1b45ab41cd5a0f60",
+      "reviewSubject": "4ea09da68b54f91828e793a3b77f71e0ae25e17ed3374316c9ea777ac78b341a",
+      "currentSubject": "4ea09da68b54f91828e793a3b77f71e0ae25e17ed3374316c9ea777ac78b341a",
+      "toolAcceptedPlan": true,
+      "toolAgrees": true,
+      "executionAllowed": false,
+      "pass": true
+    }
+  ],
+  "metrics": {
+    "cases": 4,
+    "passed": 4,
+    "missedBlocks": 0,
+    "falseBlocks": 0
+  }
+}
